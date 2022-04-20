@@ -8,6 +8,9 @@ Ensure your Droplet is configured and accessible via SSH, and you are logged in 
 
 Domain, proxying and SSL certificates should already be set up, and the application must be created.
 
+The `create-app.sh` script can be run to set up your app. Don't forgeet to run `chmod +x create-app.sh` The script requires that SSL certs have already been uploaded, as below. If using the `letsencrypt plugin`, configure your app manually, or alter the script as needed.
+
+
 This application deploys to the root domain.
 
 ```
@@ -32,6 +35,6 @@ In your Droplet:
 dokku certs:add <app-name> < cert-key.tar
 ```
 
-Alternatively, you can use the [dokku-letsencrypt](https://github.com/dokku/dokku-letsencrypt) pluggin.
+Alternatively, you can use the [dokku-letsencrypt](https://github.com/dokku/dokku-letsencrypt) plugin.
 
 \*letsencrypt will rate limit to 5 API calls per 7 day period.
